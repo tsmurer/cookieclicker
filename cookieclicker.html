@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>cookie clicker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body data-ng-app="cookie-clicker">
+    <h1 class="title">Cookie Clicker</h1>
+
+    <div class="info-box">
+        <h1 class="info-box-title">Results:</h1>
+        <h3
+        class="info-box-info"
+        data-ng-controller="cookie-controller"
+        >Cookies: {{ cookies }}</h3>
+    </div>
+
+    <div
+        class="cookie"
+        data-ng-controller="cookie-controller"
+        ng-click="click()"
+    ></div>
+</body>
+</html>
