@@ -9,21 +9,32 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
     <script src="app.js"></script>
 </head>
-<body data-ng-app="cookie-clicker">
-    <h1 class="title">Cookie Clicker</h1>
+<body>
+    <div data-ng-app="CookieClicker"
+         data-ng-controller="cookie-controller"
+    >
+        <h1 class="title">Cookie Clicker</h1>
 
-    <div class="info-box">
-        <h1 class="info-box-title">Results:</h1>
-        <h3
-        class="info-box-info"
-        data-ng-controller="cookie-controller"
-        >Cookies: {{ cookies }}</h3>
+        <div class="info-box">
+            <h1 class="info-box-title">Results:</h1>
+            <h3
+            class="info-box-info"
+            >Cookies: {{ cookies }}</h3>
+            <h3
+            class="info-box-info"
+            >Velhinhas: 0</h3>
+            <h3
+            class="info-box-info"
+            >Fábricas: 0</h3>
+            <h3
+            class="info-box-info"
+            >Minas: 0</h3>
+        </div>
+
+        <div
+            class="cookie"
+            ng-click="click()"
+        ></div>
     </div>
-
-    <div
-        class="cookie"
-        data-ng-controller="cookie-controller"
-        ng-click="click()"
-    ></div>
 </body>
 </html>
